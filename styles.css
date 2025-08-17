@@ -1,19 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: rgb(226, 206, 20);
+
+body {
+    background: radial-gradient(circle at top, #0b0c2a, #000000); /* deep space gradient */
     text-align: center;
-    color: rgb(255, 0, 0);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
 }
-.container{
+
+.container {
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.game{
+
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -22,42 +27,57 @@ body{
     align-items: center;
     gap: 1.5vmin;
 }
-.box{
+
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+    border: 2px solid #6c5ce7; /* neon purple border */
+    background-color: rgba(44, 44, 84, 0.8); /* semi-transparent dark */
+    color: #00ffe7; /* neon cyan for X/O */
     font-size: 8vmin;
+    cursor: pointer;
+    box-shadow: 0 0 15px #6c5ce7, 0 0 30px #00ffe7;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
-#reset{
-    padding: 1rem;
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #6c5ce7, 0 0 40px #00ffe7;
+}
+
+#reset, #new-btn {
+    padding: 1rem 2rem;
     border-radius: 1rem;
-    background-color: chartreuse;
-    color:rgb(6, 104, 96);
+    background-color: #6c5ce7; /* neon purple button */
+    color: #ffffff;
     border: none;
     font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px #6c5ce7, 0 0 20px #00ffe7;
+    transition: background-color 0.3s, transform 0.2s;
 }
-#new-btn{
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: chartreuse;
-    color:chocolate;
-    border: none;
-    font-size: 1.25rem;
+
+#reset:hover, #new-btn:hover {
+    background-color: #341f97;
+    transform: scale(1.05);
 }
-#msg{
-    color:white;
-    font-size:5vmin;
+
+#msg {
+    color: #00ffe7;
+    font-size: 5vmin;
+    text-shadow: 0 0 10px #00ffe7;
 }
-.message{
+
+.message {
     height: 100vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:4rem;
+    gap: 4rem;
 }
-.hide{
+
+.hide {
     display: none;
 }
